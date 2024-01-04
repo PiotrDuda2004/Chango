@@ -1,3 +1,18 @@
+body{
+    background-color: #242424;
+}
+#main-wrapper{
+    margin:0px auto;
+    width: 50%;
+}
+
+#chat-log{
+    height: max-content;
+
+}
+
+
+
 #username-box{
     background-color: aliceblue; 
     border-style:solid; 
