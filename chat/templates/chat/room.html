@@ -10,15 +10,19 @@
 </head>
 <body>
     <div id="main-wrapper">
-        <textarea id="chat-log" cols="100" rows="20"></textarea><br>
-        <input id="chat-message-input" type="text" size="100"><br>
+        <textarea id="chat-log" readonly></textarea><br>
+        <input id="chat-message-input" type="text">
         <input id="chat-message-submit" type="button" value="Send">
     </div>
 
-    <!--<div id="username-box" >
-            <input id="username-box-input" type="text" size="10" style=" display: inline-block; margin: 20px;">
+    <div id="username-box" >
+        <div class="form__group field">
+            <input type="input" class="form__field" placeholder="Name">
+            <label for="name" class="form__label">Name</label>
             <input id="username-box-submit" type="button" value="Send">
-    </div>-->
+          </div>
+            
+    </div>
     <script>
 
         const chatSocket = new WebSocket(
@@ -36,8 +40,8 @@
             console.error('Chat socket closed unexpectedly');
         };
         var usernmame; //Should it be done like this?
-        document.querySelector('#username-box-submit').onclick = function(e) {
-            const usernameInputDom = document.querySelector('#username-box-input');
+        document.querySelector('#form__field').onclick = function(e) {
+            const usernameInputDom = document.querySelector('#form__field');
             username = usernameInputDom.value;
             chatSocket.send(JSON.stringify({
                 'username': username,
