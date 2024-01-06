@@ -19,9 +19,8 @@
         <div class="form__group field">
             <input type="input" class="form__field" placeholder="Name">
             <label for="name" class="form__label">Name</label>
-            <input id="username-box-submit" type="button" value="Send">
-          </div>
-            
+        </div>
+        <input id="username-box-submit" type="button" value="Send">
     </div>
     <script>
 
@@ -40,8 +39,8 @@
             console.error('Chat socket closed unexpectedly');
         };
         var usernmame; //Should it be done like this?
-        document.querySelector('#form__field').onclick = function(e) {
-            const usernameInputDom = document.querySelector('#form__field');
+        document.querySelector('#username-box-submit').onclick = function(e) {
+            const usernameInputDom = document.querySelector('.form__field');
             username = usernameInputDom.value;
             chatSocket.send(JSON.stringify({
                 'username': username,
