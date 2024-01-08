@@ -1,7 +1,7 @@
 body{
     caret-color: transparent;
     background-color: #121212;
-    font-family: Consolas, monaco, monospace;
+    font-family: Roboto, monaco, monospace;
 }
 
 
@@ -20,27 +20,23 @@ body{
     width: 100%; 
     height: 100%;
     resize: none;
-    background-color: #777773;
+    background-color: #777777;
 }
 #chat-message-input{
-  margin-left: 30px;
-  position: absolute;
+  border: 4px solid black;
+  margin-left: 3px;
   outline: none;
-  top:460px;
-  font-weight: 600;
+  font-family: Roboto, monaco, monospace;
   border-radius: 3px;
   padding: 12px 24px;
   border: 0;
   color: #fff;
-  background: black;
+  background-color: #777777;
   line-height: 1.15;
   font-size: 16px;
+  width:65%;
 }
-#chat-message-submit{
-  margin-left: 220px;
-  position: absolute;
-  top:480px;
-}
+
 
 #username-box{
   -webkit-box-shadow: -1px -1px 42px 10px rgba(66, 68, 90, 1);
@@ -61,7 +57,24 @@ body{
     right: 0; 
     margin: auto;
 }
-
+#chat-message-submit{
+  float: right;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 3px;
+  padding: 12px 24px;
+  border: 0;
+  color: #fff;
+  background: #565656;
+  line-height: 1.15;
+  font-size: 16px;
+  width:20%;
+  :hover {
+      transition: all .1s ease;
+      box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
+  }
+}
 #username-box-submit{
     
     margin-top: -40px;
